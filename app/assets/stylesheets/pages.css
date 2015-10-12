@@ -1,0 +1,20 @@
+html,body {
+  padding:0;
+  margin:0;
+}
+
+.splash {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://download.unsplash.com/photo-1433321768402-e8ed97b0324c");
+  background-size: 100% 100%;
+  height: 800px;
+}
+
+.title {
+  padding-top: 20%;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
