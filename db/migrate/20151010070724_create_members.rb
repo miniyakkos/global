@@ -3,7 +3,7 @@ class CreateMembers < ActiveRecord::Migration
     create_table :members do |t|
       t.string :username
       t.string :rank
-      t.integer :points
+      t.integer :points, default: 0
 
       t.timestamps null: false
     end

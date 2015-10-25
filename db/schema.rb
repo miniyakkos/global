@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20151010070724) do
   create_table "members", force: :cascade do |t|
     t.string   "username"
     t.string   "rank"
-    t.integer  "points"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "points",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
