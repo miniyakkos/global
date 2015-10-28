@@ -1,6 +1,10 @@
-<% @members.each do |mem| %>
-<p><%= mem.rank %></p>
-<p><%= mem.username %>: <%= mem.points %> points</p>
-<% end %>
+<%= link_to "Add new member", new_member_path %>
+<div class="members-container">
+  <% @members.each do |mem| %>
+    <div class="member">
+      <%= mem.username %>: <%= mem.points %> points
+    </div>
+  <% end %>
+</div>
 
 <%= will_paginate @members %>
