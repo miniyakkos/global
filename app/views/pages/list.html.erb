@@ -1,0 +1,11 @@
+<%= link_to "Admin", members_path %>
+
+<div class="members-container">
+  <% @members.each do |mem| %>
+    <div class="member">
+      <%= mem.username %>: <%= mem.points %> points
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate @members %>
