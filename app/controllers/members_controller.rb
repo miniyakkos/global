@@ -19,4 +19,10 @@ class MembersController < ApplicationController
       render :index
     end
   end
+
+  def destroy
+    @member = Member.find(params[:id])
+    @member.destroy
+    render json: @member
+  end
 end

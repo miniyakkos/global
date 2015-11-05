@@ -6,15 +6,31 @@ html,body {
 .splash {
   margin: 0;
   padding: 0;
-  background-image: url("https://download.unsplash.com/photo-1433321768402-e8ed97b0324c");
+  background-image: url("https://download.unsplash.com/photo-1444703686981-a3abbc4d4fe3");
   background-size: 100% 100%;
   height: 800px;
 }
 
 .title {
-  padding-top: 20%;
+  padding-top: 30%;
   margin: 0;
   font-family: "Noto Sans", sans-serif;
   font-size: 3em;
   text-align: center;
+}
+
+.nav-bar {
+  /*background-color: #276E6A;*/
+  background-color: black;
+  padding: 1.5%;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
 }

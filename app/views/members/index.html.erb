@@ -1,13 +1,5 @@
-<div class="members-container">
-  <% @members.each do |mem| %>
-    <div class="member">
-      <%= mem.username %>: <%= mem.points %> points
-    </div>
-  <% end %>
-</div>
-
-<%= will_paginate @members %>
-
+<div class="new-form">
+<p class="header">Add new member</p>
 <% if @errors %>
   <% @errors.each do |error| %>
     <p class="error"><%= error %></p>
@@ -26,3 +18,15 @@
 
   <%= f.submit %>
 <% end %>
+</div>
+
+<div class="members-container">
+  <% @members.each do |mem| %>
+    <div class="member">
+      <%= mem.username %>: <%= mem.points %> points
+      <%= button_to "Delete", member_path(mem.id), method: :delete, class: "delete" %>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate @members %>
+
