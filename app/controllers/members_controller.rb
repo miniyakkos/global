@@ -20,6 +20,16 @@ class MembersController < ApplicationController
     end
   end
 
+  def update
+    @member = Member.find(params[:id])
+    @member.username = params[:member][:username]
+    @member.rank = params[:member][:rank]
+    @member.points = params[:member][:points]
+    if @member.save
+      render json: @member
+    end
+  end
+
   def destroy
     @member = Member.find(params[:id])
     @member.destroy

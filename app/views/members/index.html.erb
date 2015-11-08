@@ -25,6 +25,19 @@
     <div class="member">
       <%= mem.username %>: <%= mem.points %> points
       <%= button_to "Delete", member_path(mem.id), method: :delete, class: "delete" %>
+      <button class="edit">Edit</button>
+      <%= form_for mem, url: member_path(mem.id) do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+
+        <%= f.label :rank %>
+        <%= f.text_field :rank %>
+
+        <%= f.label :points %>
+        <%= f.text_field :points %>
+
+        <%= f.submit %>
+      <% end %>
     </div>
   <% end %>
 </div>
